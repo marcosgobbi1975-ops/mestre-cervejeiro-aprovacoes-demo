@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="app.css">
 <title>Mestre Cervejeiro · Aprovações</title>
 <script src="app.js" defer></script>
+<script src="connection.js" defer></script>
 </head>
 <body>
 <div class="shell">
@@ -41,7 +42,7 @@
   <div class="settings"><div><span>◈</span><section><strong>Passkey Android</strong><small>Não cadastrada</small></section><em>Pendente</em></div><div><span>⌁</span><section><strong>Servidor independente</strong><small>Não conectado</small></section><em>Pendente</em></div><div><span>◉</span><section><strong>WhatsApp</strong><small>Apenas avisos, opcional</small></section><em>Pendente</em></div></div>
   <div class="tip"><span>♢</span><div><strong>Proteção essencial</strong><p>Responder “APROVADO” por WhatsApp não libera alterações. Um serviço protegido deverá verificar uma passkey e a transação exata.</p></div></div>
   <section class="diagnostics" aria-labelledby="diag-title">
-    <div class="diag-heading"><div><span class="kicker">DIAGNÓSTICO LOCAL</span><h3 id="diag-title">Este Android</h3></div><span class="diag-version">VERSÃO 1.1</span></div>
+    <div class="diag-heading"><div><span class="kicker">DIAGNÓSTICO LOCAL</span><h3 id="diag-title">Este Android</h3></div><span class="diag-version">VERSÃO 1.2</span></div>
     <p>Verificações feitas somente neste aparelho. Não criamos passkey nem pedimos impressão digital.</p>
     <div class="diag-list">
       <div><span>Instalação</span><strong id="install-status">Ainda não verificado</strong></div>
@@ -56,6 +57,31 @@
     <div><span class="integration-number">02</span><p><strong>Passkey e transação vinculada</strong><small>Confirmar a alteração exata, não apenas um login</small></p></div>
     <div><span class="integration-number">03</span><p><strong>Solicitações reais e auditoria</strong><small>Canal autenticado; nenhuma tarefa privada exposta neste site</small></p></div>
   </div>
+  <section class="connection-setup" aria-labelledby="connection-title">
+  <div class="connection-heading">
+    <div><span class="kicker">PREPARAÇÃO · V1.2</span><h3 id="connection-title">Conexão segura</h3></div>
+    <span class="connection-badge">AINDA NÃO CONECTADO</span>
+  </div>
+  <p>O Mestre Aprova já funciona no Android, mas ainda não está ligado à autoridade independente nem às tarefas reais.</p>
+  <dl class="connection-status">
+    <div><dt>Servidor de autoridade</dt><dd id="server-connect-state">Não conectado</dd></div>
+    <div><dt>Passkey do proprietário</dt><dd id="passkey-connect-state">Não cadastrada</dd></div>
+    <div><dt>Aprovações Codex / Claude</dt><dd id="agents-connect-state">Bloqueadas</dd></div>
+  </dl>
+  <button id="connection-details-toggle" class="outline" type="button" aria-controls="connection-details" aria-expanded="false">Entenda os próximos passos</button>
+  <div id="connection-details" class="connection-details" hidden>
+    <ol>
+      <li>Publicar uma autoridade independente em HTTPS, sob controle do proprietário.</li>
+      <li>Abrir o portal seguro no Chrome do Android e cadastrar a passkey por lá.</li>
+      <li>Testar a autenticação, a recuperação de acesso e solicitações fictícias.</li>
+      <li>Integrar os agentes somente após auditoria e aprovação dos controles.</li>
+    </ol>
+    <p>O autenticador local disponível não significa passkey cadastrada. Nunca informe códigos secretos nesta demonstração.</p>
+  </div>
+  <a id="authority-entry" class="authority-entry" target="_blank" rel="noopener noreferrer" hidden>Abrir portal seguro (quando disponível)</a>
+  <p id="connection-note" class="connection-note" role="status" aria-live="polite">O portal seguro ainda não foi publicado.</p>
+  <strong class="connection-locked">🔒 Aprovações reais continuam bloqueadas</strong>
+</section>
   <button class="outline" id="install-button" type="button">📲 Instalar app no Android</button><p id="install-message" class="install-message" role="status" aria-live="polite"></p>
 </section>
 </main>
