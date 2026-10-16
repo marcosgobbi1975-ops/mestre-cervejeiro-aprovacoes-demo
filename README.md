@@ -9,3 +9,7 @@ Instalação Android: abra o site HTTPS no Chrome, menu ⋮, Instalar app/Adicio
 Status: demonstração estática, sem WhatsApp, sem passkey cadastrada, sem autenticação, sem Gate ou State Machine. A futura autoridade precisa estar em serviço independente sob controle humano.
 
 Arquivos públicos: index.html, app.js, app.css, manifest.webmanifest, service-worker.js, ícones 192 e 512 PNG.
+
+## V1.1 — diagnóstico local
+
+Na aba Segurança, botão 'Verificar meu celular': verifica modo standalone, estado de conexão indicado pelo sistema e disponibilidade do autenticador da plataforma por API WebAuthn, **sem criar ou solicitar credenciais**. O resultado não é prova de biometria cadastrada, identidade ou autorização. Nenhuma informação do diagnóstico é enviada à rede ou armazenada.

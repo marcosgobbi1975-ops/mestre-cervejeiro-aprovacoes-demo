@@ -40,6 +40,22 @@
   <div class="sectop"><div><span class="kicker">IDENTIDADE E ACESSO</span><h2>Segurança</h2></div></div>
   <div class="settings"><div><span>◈</span><section><strong>Passkey Android</strong><small>Não cadastrada</small></section><em>Pendente</em></div><div><span>⌁</span><section><strong>Servidor independente</strong><small>Não conectado</small></section><em>Pendente</em></div><div><span>◉</span><section><strong>WhatsApp</strong><small>Apenas avisos, opcional</small></section><em>Pendente</em></div></div>
   <div class="tip"><span>♢</span><div><strong>Proteção essencial</strong><p>Responder “APROVADO” por WhatsApp não libera alterações. Um serviço protegido deverá verificar uma passkey e a transação exata.</p></div></div>
+  <section class="diagnostics" aria-labelledby="diag-title">
+    <div class="diag-heading"><div><span class="kicker">DIAGNÓSTICO LOCAL</span><h3 id="diag-title">Este Android</h3></div><span class="diag-version">VERSÃO 1.1</span></div>
+    <p>Verificações feitas somente neste aparelho. Não criamos passkey nem pedimos impressão digital.</p>
+    <div class="diag-list">
+      <div><span>Instalação</span><strong id="install-status">Ainda não verificado</strong></div>
+      <div><span>Autenticador do aparelho</span><strong id="authenticator-status">Ainda não verificado</strong></div>
+      <div><span>Conexão indicada</span><strong id="transport-status">Ainda não verificado</strong></div>
+    </div>
+    <button class="outline" id="check-device" type="button">Verificar meu celular</button>
+    <p class="diag-foot" id="diagnostic-note" role="status" aria-live="polite">Esta verificação não cadastra credenciais e não habilita aprovação.</p>
+  </section>
+  <div class="integration"><span class="kicker">PRÓXIMA INTEGRAÇÃO</span><h3>O que falta conectar</h3>
+    <div><span class="integration-number">01</span><p><strong>Servidor de autoridade independente</strong><small>Identidade e políticas protegidas fora dos agentes</small></p></div>
+    <div><span class="integration-number">02</span><p><strong>Passkey e transação vinculada</strong><small>Confirmar a alteração exata, não apenas um login</small></p></div>
+    <div><span class="integration-number">03</span><p><strong>Solicitações reais e auditoria</strong><small>Canal autenticado; nenhuma tarefa privada exposta neste site</small></p></div>
+  </div>
   <button class="outline" id="install-button" type="button">📲 Instalar app no Android</button><p id="install-message" class="install-message" role="status" aria-live="polite"></p>
 </section>
 </main>
