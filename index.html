@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#102839">
+<meta name="description" content="Demonstração do aplicativo Android Mestre Cervejeiro — Aprovações. Sem acesso a tarefas reais.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; manifest-src 'self'">
+<link rel="icon" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="app.css">
+<title>Mestre Cervejeiro · Aprovações</title>
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="shell">
+<header class="head">
+ <div class="brand"><span class="mark">M<span class="mark-dot"></span></span><span><strong>MESTRE CERVEJEIRO</strong><small>Central de aprovações</small></span><span class="shield" aria-label="Modo demonstrativo seguro">♢</span></div>
+ <p class="eyebrow">◉ PAINEL PESSOAL · ANDROID</p>
+ <h1 id="page-title">Suas aprovações<span class="mint">.</span></h1>
+ <p class="lede" id="page-description">Acompanhe as solicitações e mantenha controle sobre decisões importantes.</p>
+ <div class="demo-pill">● DEMONSTRAÇÃO · SEM EFEITO REAL</div>
+</header>
+<main>
+<section class="pane current" data-panel="inbox">
+  <div class="status"><div class="status-row"><span class="status-symbol">◎</span><div><strong>Ambiente não conectado</strong><p>Servidor de aprovação e passkey ainda não configurados.</p></div></div><div class="status-foot">● Aprovações reais bloqueadas <span aria-hidden="true">↗</span></div></div>
+  <div class="sectop"><div><span class="kicker">CAIXA DE ENTRADA</span><h2>Solicitações <span class="count" id="request-count">0</span></h2></div><small id="request-label">Nenhuma pendente</small></div>
+  <div id="inbox-empty" class="empty"><div class="empty-icon">▣</div><h3>Tudo tranquilo por aqui</h3><p>Quando o serviço protegido estiver conectado, suas solicitações aparecerão aqui.</p></div>
+  <article class="request" id="demo-card" hidden aria-label="Solicitação demonstrativa sem efeito"><div class="request-tags"><span class="sample">● EXEMPLO · SEM EFEITO</span><span>INFRAESTRUTURA</span></div><h3>Qualificação do Gate Python 3.14</h3><p>Exemplo de alteração que poderá exigir sua autorização no futuro.</p><div class="agents"><span><i>C</i> Codex · Preparação</span><span><i>A</i> Claude · Revisão</span></div><button id="detail-button" class="detail" type="button">Ver detalhes do exemplo <span>→</span></button></article>
+  <button class="outline" id="demo-toggle" type="button">✳ Mostrar solicitação de exemplo</button>
+  <div class="tip"><span>✦</span><div><strong>Seu celular será a chave</strong><p>No sistema real, uma passkey Android confirmará sua identidade. WhatsApp poderá enviar avisos, nunca autorizar sozinho.</p></div></div>
+</section>
+<section class="pane" data-panel="activity" hidden>
+  <div class="sectop"><div><span class="kicker">RASTREABILIDADE</span><h2>Histórico</h2></div></div>
+  <div class="empty"><div class="empty-icon">↗</div><h3>Nenhum evento real</h3><p>Quando o serviço estiver conectado, decisões terão evidências verificáveis.</p></div>
+  <div class="tip"><span>◷</span><div><strong>Evidências futuras</strong><p>Missão, revisão, diffs, hashes e resultado de autenticação ficarão vinculados à aprovação.</p></div></div>
+</section>
+<section class="pane" data-panel="security" hidden>
+  <div class="sectop"><div><span class="kicker">IDENTIDADE E ACESSO</span><h2>Segurança</h2></div></div>
+  <div class="settings"><div><span>◈</span><section><strong>Passkey Android</strong><small>Não cadastrada</small></section><em>Pendente</em></div><div><span>⌁</span><section><strong>Servidor independente</strong><small>Não conectado</small></section><em>Pendente</em></div><div><span>◉</span><section><strong>WhatsApp</strong><small>Apenas avisos, opcional</small></section><em>Pendente</em></div></div>
+  <div class="tip"><span>♢</span><div><strong>Proteção essencial</strong><p>Responder “APROVADO” por WhatsApp não libera alterações. Um serviço protegido deverá verificar uma passkey e a transação exata.</p></div></div>
+  <button class="outline" id="install-button" type="button">📲 Instalar app no Android</button><p id="install-message" class="install-message" role="status" aria-live="polite"></p>
+</section>
+</main>
+<nav class="navbar" aria-label="Navegação"><button type="button" class="tab active" data-tab="inbox" aria-current="page"><span>▤</span>Solicitações</button><button type="button" class="tab" data-tab="activity"><span>◷</span>Histórico</button><button type="button" class="tab" data-tab="security"><span>♢</span>Segurança</button></nav>
+</div>
+<dialog id="request-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><span class="sample">EXEMPLO SEM EFEITO</span><button id="close-dialog" aria-label="Fechar detalhes" type="button">✕</button></div><h2 id="dialog-title">Gate Python 3.14</h2><p>Assim serão apresentadas solicitações futuras, depois que existir um serviço de autorização protegido.</p><dl><div><dt>Executor</dt><dd>Codex</dd></div><div><dt>Revisor</dt><dd>Claude Code</dd></div><div><dt>Operação</dt><dd>Qualificar ambiente de testes</dd></div><div><dt>Arquivos e hashes</dt><dd>Não disponíveis no exemplo</dd></div><div><dt>Autorização</dt><dd>Desativada</dd></div></dl><p class="warning">Este exemplo não cria, aprova ou rejeita tarefas reais.</p><button class="locked" type="button" disabled>🔒 Autorizar alteração · indisponível</button></dialog>
+</body>
+</html>
